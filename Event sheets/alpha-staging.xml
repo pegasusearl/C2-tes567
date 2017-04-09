@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>alpha-staging</name>
+    <events>
+        <include>control</include>
+        <comment>debugging</comment>
+        <event-block sid="562501558322247">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="291211707316324" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="202898205339094" type="debug">
+                    <param id="0" name="Instance variable">debug</param>
+                    <param id="1" name="Value">2232</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="497179631962565">
+            <conditions>
+                <condition id="2" name="Key is down" sid="570446053008237" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="315779654424055" type="System">
+                    <param id="0" name="Variable">2jump</param>
+                    <param id="1" name="Value">23</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

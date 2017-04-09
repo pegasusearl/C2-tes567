@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>stagemusic</name>
+    <events>
+        <event-block sid="880061632274646">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="111866619263505" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="152390448132241">
+                    <conditions>
+                        <condition id="5" name="Is tag playing" sid="261217424914117" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="579580860733881" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="576434223667530">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="754199377977412" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="702391659268476" type="Audio">
+                            <param id="0" name="Audio file">awake10</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

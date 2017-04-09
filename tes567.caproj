@@ -1,0 +1,2330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>tes567</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="burn">Burn</effect>
+        <effect author="Scirra" id="hsladjustmask">Adjust HSL Mask</effect>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="bleed">
+            <object-type name="stagingform" sid="151151615717967">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="870904700112302">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="530473892680087">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="F:\tugas-game\C2\1\aset konstruk\03_Asset\platformer-assets\Platformer\Abstract Platformer\PNG\Tiles\Blue tiles\tileBlue_01.png" />
+            </object-type>
+            <object-type name="Keyboard" sid="429029681869652">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="TiledBackground" sid="709106058681538">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="debug" sid="284900772997814">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="debug" sid="443136224803074" type="number" />
+                </instance-variables>
+            </object-type>
+        </object-folder>
+        <object-type name="Untitled" sid="987090646344790">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825271028373360" speed="5">
+                    <frame duration="1" hotspotX="0.500336" hotspotY="0.500475" original-source="E:\tes567\ase\Untitled-1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="238364545039254">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426772468590077" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="692224861932962">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="386899020255454">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Particles" sid="410357489596395">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground3" sid="943646930159937">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground4" sid="809926258371268">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite2" sid="447559426011839">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="847517382463329" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="786223097809998">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="384838455590411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="325838738325961">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="184752366443560">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373394812422254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.0625" />
+                            <point x="0" y="0.0625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gear" sid="565052696532742">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372914153605411" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Tugas\ISI\S2\gear-8.png">
+                        <collision-poly>
+                            <point x="0.191406" y="0.191406" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.844727" y="0.844727" />
+                            <point x="0.5" y="0.954102" />
+                            <point x="0.191406" y="0.808594" />
+                            <point x="0.0107422" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gear2" sid="536589871816687">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575977509327034" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Tugas\ISI\S2\gear-8.png">
+                        <collision-poly>
+                            <point x="0.191406" y="0.191406" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.844727" y="0.844727" />
+                            <point x="0.5" y="0.954102" />
+                            <point x="0.191406" y="0.808594" />
+                            <point x="0.0107422" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gear3" sid="556249271716758">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426016156242166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Tugas\ISI\S2\gear-8.png">
+                        <collision-poly>
+                            <point x="0.191406" y="0.191406" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.844727" y="0.844727" />
+                            <point x="0.5" y="0.954102" />
+                            <point x="0.191406" y="0.808594" />
+                            <point x="0.0107422" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="a" sid="454870490699725">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite5" sid="322281979589991">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="501438700079790">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="226513193293932">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500390852971946" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.196" />
+                            <point x="1" y="0.196" />
+                            <point x="1" y="0.236" />
+                            <point x="0" y="0.236" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="942784278896361">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="AdjustHSLMask">
+                    <effect id="hsladjustmask" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312747387818952" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled2" sid="714818241845980">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218069794954927" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Untitled-1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground5" sid="653938837689731">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground6" sid="485947353486931">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground7" sid="628485854092215">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="322381680980415">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground8" sid="980750490448035">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="463558422448201">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="E" sid="988584529891661">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="900211751489032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\tes567\ase\E1.png">
+                        <collision-poly>
+                            <point x="0.225806" y="0.159635" />
+                            <point x="0.5" y="0.0219498" />
+                            <point x="0.774597" y="0.15935" />
+                            <point x="0.551613" y="0.5" />
+                            <point x="0.551613" y="0.68301" />
+                            <point x="0.5" y="0.915051" />
+                            <point x="0.448387" y="0.68301" />
+                            <point x="0.448387" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles2" sid="146742537691966">
+            <plugin id="Particles" />
+            <texture original-source="E:\tes567\ase\E1.png" />
+        </object-type>
+        <object-type name="Sprite7" sid="643082822349692">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313931112748168" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="790939282906154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="986132436609160" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="E2" sid="941996748127378">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="665962515300186">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611349644605485" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500443" original-source="E:\tes567\ase\E2.png">
+                        <collision-poly>
+                            <point x="0.0467391" y="0.0761736" />
+                            <point x="0.953261" y="0.0761736" />
+                            <point x="0.758152" y="0.244464" />
+                            <point x="0.663044" y="0.20992" />
+                            <point x="0.5" y="0.279894" />
+                            <point x="0.23913" y="0.17449" />
+                            <point x="0.0619565" y="0.21612" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="E3" sid="300658819253350">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538321615456675" speed="5">
+                    <frame duration="1" hotspotX="0.500829" hotspotY="0.501873" original-source="E:\tes567\ase\E3.png">
+                        <collision-poly>
+                            <point x="0.180763" y="0.40824" />
+                            <point x="0.820895" y="0.404494" />
+                            <point x="0.882255" y="0.498127" />
+                            <point x="0.817579" y="0.588015" />
+                            <point x="0.499171" y="0.565543" />
+                            <point x="0.192371" y="0.565543" />
+                            <point x="0.13267" y="0.498127" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles3" sid="749111735704340">
+            <plugin id="Particles" />
+            <texture original-source="E:\tes567\ase\E3.png" />
+        </object-type>
+        <object-type name="Particles4" sid="909591297560309">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="E4" sid="113320341836263">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="748409071588637" speed="5">
+                    <frame duration="1" hotspotX="0.500484" hotspotY="0.500527" original-source="E:\tes567\ase\E4.png">
+                        <collision-poly>
+                            <point x="0.2788" y="0.303477" />
+                            <point x="0.499516" y="0.223393" />
+                            <point x="0.670862" y="0.358272" />
+                            <point x="0.739593" y="0.499473" />
+                            <point x="0.754114" y="0.73235" />
+                            <point x="0.499516" y="0.767123" />
+                            <point x="0.31365" y="0.658588" />
+                            <point x="0.132623" y="0.499473" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hpbar" sid="550655150596912">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="919364128519830" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.538462" original-source="F:\tugas-game\UI\HUD\hpbar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hpcon" sid="423253730718190">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="626828092783479" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\tugas-game\UI\HUD\hpcon.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0333333" />
+                            <point x="0.966667" y="0.5" />
+                            <point x="0.5" y="0.966667" />
+                            <point x="0.0333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hpnel" sid="574070754475524">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344957121615656" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.529412" original-source="F:\tugas-game\UI\HUD\hpnel.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mpbar" sid="939593331541879">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="635584840906135">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="954100141853649" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.538462" original-source="F:\tugas-game\UI\HUD\mpbar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mpcon" sid="949765981019499">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347209859016423" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\tugas-game\UI\HUD\mpcon.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0333333" />
+                            <point x="0.966667" y="0.5" />
+                            <point x="0.5" y="0.966667" />
+                            <point x="0.0333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="timedata" sid="944108694353677">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267255797299095" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\tugas-game\UI\HUD\timedata.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mpnel" sid="200844532263608">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101501118264145" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.529412" original-source="F:\tugas-game\UI\HUD\mpnel.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spy" sid="844082754174649">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="360047748953829">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="172642588898485" speed="5">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.5" original-source="F:\tugas-game\follower\spy.png">
+                        <collision-poly>
+                            <point x="0.319149" y="0.394737" />
+                            <point x="0.489362" y="0.131579" />
+                            <point x="0.765957" y="0.289474" />
+                            <point x="0.851064" y="0.5" />
+                            <point x="0.808511" y="0.763158" />
+                            <point x="0.489362" y="0.894737" />
+                            <point x="0.148936" y="0.815789" />
+                            <point x="0.212766" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="walken" sid="324219904732141">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="689887014170277">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="556959478595641">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="327918889701576">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="658545991470177">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="40" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="990221807228479" speed="60">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0001.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0002.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0003.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0004.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0005.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0006.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0007.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0008.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0009.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0010.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0011.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0012.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0013.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0014.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0015.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0016.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0017.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0018.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0019.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0020.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0021.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0022.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0023.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0024.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0025.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0026.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0027.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0028.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0029.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0030.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0031.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0032.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0033.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0034.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0035.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0036.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0037.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0038.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0039.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\walking\walken.0040.png">
+                        <collision-poly>
+                            <point x="0.435" y="0.367647" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.551667" y="0.377941" />
+                            <point x="0.55" y="0.501471" />
+                            <point x="0.57" y="0.679412" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.428333" y="0.514706" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stand" pingpong="0" repeatcount="1" repeatto="0" sid="128278585775444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\stand still.png">
+                        <collision-poly>
+                            <point x="0.44" y="0.388235" />
+                            <point x="0.5" y="0.164706" />
+                            <point x="0.506667" y="0.435294" />
+                            <point x="0.526667" y="0.5" />
+                            <point x="0.5475" y="0.938971" />
+                            <point x="0.428333" y="0.938235" />
+                            <point x="0.46" y="0.594118" />
+                            <point x="0.426667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="857552338337964" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump\jump-animated.0002.png">
+                        <collision-poly>
+                            <point x="0.586666" y="0.188235" />
+                            <point x="0.746667" y="0.282353" />
+                            <point x="0.533334" y="0.947059" />
+                            <point x="0.293333" y="0.929412" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="15" loop="0" name="jump2" pingpong="0" repeatcount="1" repeatto="0" sid="434577640758686" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0001.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0002.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0003.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0004.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0005.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0006.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0007.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0008.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0009.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0010.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0011.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0012.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0013.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0014.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\jump2 rev1\sprite.0015.png">
+                        <collision-poly>
+                            <point x="0.376667" y="0.211765" />
+                            <point x="0.67" y="0.226471" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.32" y="0.944117" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="13" loop="0" name="roketground" pingpong="0" repeatcount="1" repeatto="0" sid="386646561911407" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0000.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0001.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0002.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0003.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0004.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0005.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0006.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0007.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0008.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0009.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0010.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0011.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\rocket\floor\roketground.0012.png">
+                        <collision-poly>
+                            <point x="0.441667" y="0.588235" />
+                            <point x="0.826666" y="0.526471" />
+                            <point x="0.831666" y="0.645588" />
+                            <point x="0.6" y="0.77206" />
+                            <point x="0.716667" y="0.802941" />
+                            <point x="0.556667" y="0.936765" />
+                            <point x="0.44" y="0.935294" />
+                            <point x="0.331667" y="0.776471" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="exhausted" pingpong="0" repeatcount="1" repeatto="0" sid="561008057225176" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\tugas-game\exhausted.png">
+                        <collision-poly>
+                            <point x="0.393333" y="0.411765" />
+                            <point x="0.573334" y="0.288235" />
+                            <point x="0.586667" y="0.947059" />
+                            <point x="0.36" y="0.941176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="charge" pingpong="0" repeatcount="1" repeatto="0" sid="962190873198696" speed="5">
+                    <frame duration="1" hotspotX="0.299465" hotspotY="0.0521327" original-source="F:\fast\sprite\hammering\hit.0001.png">
+                        <collision-poly>
+                            <point x="0.208556" y="0.469194" />
+                            <point x="0.347594" y="0.492891" />
+                            <point x="0.550802" y="0.914692" />
+                            <point x="0.235294" y="0.919431" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="unleash" pingpong="0" repeatcount="1" repeatto="0" sid="846042064934397" speed="5">
+                    <frame duration="1" hotspotX="0.40107" hotspotY="-0.056872" original-source="F:\fast\sprite\hammering\hit.0002.png">
+                        <collision-poly>
+                            <point x="0.26738" y="0.341232" />
+                            <point x="0.395722" y="0.350711" />
+                            <point x="0.395722" y="0.834123" />
+                            <point x="0.160428" y="0.85308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="45" loop="0" name="paralyzed" pingpong="0" repeatcount="1" repeatto="0" sid="227129282361946" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0001.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0002.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0003.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0004.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0005.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0006.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0007.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0008.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0009.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0010.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0011.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0012.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0013.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0014.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0015.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0016.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0017.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0018.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0019.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0020.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0021.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0022.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0023.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0024.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0025.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0026.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0027.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0028.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0029.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0030.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0031.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0032.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0033.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0034.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0035.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0036.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0037.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0038.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0039.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0040.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0041.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0042.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0043.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0044.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\knocked\paralyzed.0045.png">
+                        <collision-poly>
+                            <point x="0.42" y="0.191176" />
+                            <point x="0.62" y="0.208824" />
+                            <point x="0.593334" y="0.970588" />
+                            <point x="0.436666" y="0.973529" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="wake" pingpong="0" repeatcount="1" repeatto="0" sid="776807017974445" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="block" pingpong="0" repeatcount="1" repeatto="0" sid="863698073348370" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.205882" original-source="F:\fast\sprite\block.png">
+                        <collision-poly>
+                            <point x="0.45" y="0.152941" />
+                            <point x="0.63" y="0.158824" />
+                            <point x="0.653334" y="0.944117" />
+                            <point x="0.373333" y="0.947059" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled3" sid="156788222156721">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348667910835243" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\tes567\ase\Untitled-1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="B" sid="206633090699694">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="246713355388871" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\tes567\ase\B1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground9" sid="204798641063881">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="731834395338860">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite9" sid="559453385941823">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703884244585595" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="834031414127560">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286703039259749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="560938293464309">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296872401207940" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="753118475388239">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742124258982714" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="216283937913577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327696773073941" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="436802803036572">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="722473853617153">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591124547582261" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.044" />
+                            <point x="0" y="0.044" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="971545154045423">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="648307966183868">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="642471686785015">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663197587400696" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.212" />
+                            <point x="0" y="0.18" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="954967670614769">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="Sprite16" sid="956590659765177">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491967284649435" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite17" sid="668919949515473">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="185286413151238" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="591123593438950">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725715788228908" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C" sid="763280181572568">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803315023812011" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\tes567\ase\C1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground10" sid="746332002959249">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="731534236029016">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite19" sid="948552934095464">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="283224723483483" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite20" sid="330388981052785">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="532823519329913">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="589922226042311">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492752710157276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.0320003" />
+                            <point x="0" y="0.04" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite21" sid="672877580531122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850002514460997" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite22" sid="311116439378947">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287819801055392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="D" sid="205438658251005">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961798809008073" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\tes567\ase\D1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground11" sid="353159810364953">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="518628281127129">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground12" sid="663223717005006">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite23" sid="980181643072124">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992313518323581" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite24" sid="759291301095472">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="498761043063581" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg" sid="144515691604151">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523550002802445" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\fast\bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerhit" sid="160109296685090">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122004961665836" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemy" sid="205479851774174">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="hp" sid="854737986830852" type="number" />
+                <instance-variable name="overheat" sid="556110915357335" type="number" />
+                <instance-variable name="canon" sid="643191556479265" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="544301792279428">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="940798538132396">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="336081590082243">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="stand" pingpong="0" repeatcount="1" repeatto="0" sid="279303935518385" speed="10">
+                    <frame duration="1" hotspotX="0.516854" hotspotY="0.139706" original-source="F:\fast\enemy.png">
+                        <collision-poly>
+                            <point x="0.808989" y="0.5" />
+                            <point x="0.955056" y="0.970588" />
+                            <point x="0.505618" y="1" />
+                            <point x="0.134831" y="0.911765" />
+                            <point x="0.202247" y="0.5" />
+                            <point x="0.123595" y="0.0808824" />
+                            <point x="0.505618" y="0" />
+                            <point x="0.898876" y="0.0661765" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="overheat" pingpong="0" repeatcount="1" repeatto="0" sid="269709919468507" speed="4">
+                    <frame duration="1" hotspotX="0.516854" hotspotY="0.139706">
+                        <collision-poly>
+                            <point x="0.808989" y="0.5" />
+                            <point x="0.955056" y="0.970588" />
+                            <point x="0.505618" y="1" />
+                            <point x="0.134831" y="0.911765" />
+                            <point x="0.202247" y="0.5" />
+                            <point x="0.123595" y="0.0808824" />
+                            <point x="0.505618" y="0" />
+                            <point x="0.898876" y="0.0661765" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.516854" hotspotY="0.139706">
+                        <collision-poly>
+                            <point x="0.808989" y="0.5" />
+                            <point x="0.955056" y="0.970588" />
+                            <point x="0.505618" y="1" />
+                            <point x="0.134831" y="0.911765" />
+                            <point x="0.202247" y="0.5" />
+                            <point x="0.123595" y="0.0808824" />
+                            <point x="0.505618" y="0" />
+                            <point x="0.898876" y="0.0661765" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="296090138847118">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="chatt" sid="358218922451122">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="msg" sid="612623338912681" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="413182495245639">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="638986298760338">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="rocket" sid="937064103424658">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="lastx" sid="178279032396751" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="452030720049889">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148760481805614" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.517241" original-source="F:\fast\sprite\rocket.png">
+                        <collision-poly>
+                            <point x="0.0630631" y="0.241379" />
+                            <point x="0.495495" y="0.0344828" />
+                            <point x="0.981982" y="0.0689655" />
+                            <point x="0.972973" y="0.482759" />
+                            <point x="0.945946" y="0.793103" />
+                            <point x="0.495495" y="0.965517" />
+                            <point x="0.0630631" y="0.758621" />
+                            <point x="0.018018" y="0.482759" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite25" sid="200279024000671">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="616730918510895" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="F:\fast\mainmenu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="268916963231492">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text2" sid="618184386629358">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="START" sid="752999722701246">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="shown" sid="968181994842452" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="righte" sid="705808458449513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="191726458982568" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\fast\righte.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lefte" sid="783813377161738">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710849393920103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\fast\lefte.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground13" sid="307741871292794">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="tutorialtile" sid="445782750267697">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="760069511061198">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\tugas-game\asset\tiledmap\g5704.png" />
+        </object-type>
+        <object-type name="tutorialmap" sid="890409927589047">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="994233329640909">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="tutorial" sid="262262682784613">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905136964114266" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="F:\fast\tutorial1.png" />
+                    <frame duration="1" hotspotX="0.501279" hotspotY="0.502857" original-source="F:\fast\tutorial2.png" />
+                    <frame duration="1" hotspotX="0.501279" hotspotY="0.502857" original-source="F:\fast\tutorial3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503817" original-source="F:\fast\tutorial4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shield" sid="518087787998632">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587620019336904" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="-0.205882" original-source="F:\fast\shield.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hint" sid="601337586252801">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="405234189271548">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="compass" sid="640408224746037">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392563407192212" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.5" original-source="F:\compass.png">
+                        <collision-poly>
+                            <point x="0.304348" y="0.318182" />
+                            <point x="0.478261" y="0.318182" />
+                            <point x="0.782609" y="0.227273" />
+                            <point x="1" y="0.5" />
+                            <point x="0.782609" y="0.772727" />
+                            <point x="0.478261" y="0.636364" />
+                            <point x="0.304348" y="0.681818" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite26" sid="855949267226973">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="255851674404552" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="984560486188668">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="supcompas" sid="572781330140754">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="122341689824952" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="blood" sid="593524229079670">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Flash" sid="303413807739522">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Gamepad" sid="848900256612942">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Browser" sid="597678384708147">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="LocalStorage" sid="561476227579492">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="tutorialtile2" sid="143202165636465">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="818006332169404">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\tugas-game\asset\tiledmap\g5704.png" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="particlefect" plugin-id="Particles" sid="987275978085981">
+            <members>
+                <member>Particles</member>
+                <member>Particles2</member>
+                <member>Particles3</member>
+            </members>
+        </family>
+        <family name="fgfect" plugin-id="Sprite" sid="427823706909619">
+            <members>
+                <member>E</member>
+                <member>gear</member>
+                <member>gear2</member>
+                <member>gear3</member>
+            </members>
+        </family>
+        <family name="aktor" plugin-id="Sprite" sid="381316779877877">
+            <members>
+                <member>enemy</member>
+                <member>walken</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>alpha-staging.xml</layout>
+        <layout>stage1.xml</layout>
+        <layout>stage2.xml</layout>
+        <layout>stage3.xml</layout>
+        <layout>stage4.xml</layout>
+        <layout>boss.xml</layout>
+        <layout>tutorial.xml</layout>
+        <layout>menu.xml</layout>
+        <layout>setting.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>alpha-staging.xml</event-sheet>
+        <event-sheet>control.xml</event-sheet>
+        <event-sheet>stage1.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>Event sheet 4.xml</event-sheet>
+        <event-sheet>tutorial.xml</event-sheet>
+        <event-sheet>menu.xml</event-sheet>
+        <event-sheet>xsetting.xml</event-sheet>
+        <event-sheet>stagemusic.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Audio" uid="217">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Gamepad" uid="270">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="271" />
+        <global-instance type="LocalStorage" uid="272" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="awake10.ogg" />
+        <file name="through space.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

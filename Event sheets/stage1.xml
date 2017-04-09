@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>stage1</name>
+    <events>
+        <include>stagemusic</include>
+        <include>control</include>
+        <event-block sid="587857250648051">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="788203097935779" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="453906537181684" type="System">
+                    <param id="0" name="Variable">lastplayed</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564850913972210">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="748409249967338" type="System" />
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="459711377878984" type="gear">
+                    <param id="0" name="Degrees">-0.1</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="177975753301815" type="gear3">
+                    <param id="0" name="Degrees">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="629047530692872">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="681057500586684" type="walken">
+                    <param id="0" name="Object">a</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="281764009803905" type="walken">
+                    <param id="0" name="Y">-230</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="441556211664788" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="747785344504046">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="585490180649811" type="enemy">
+                    <param id="0" name="Object">a</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="618432809304433" type="enemy">
+                    <param id="0" name="Y">-230</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="246976924993895" type="enemy">
+                    <param id="0" name="Instance variable">hp</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="712019742768866">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="277653756699047" type="walken">
+                    <param id="0" name="Object">TiledBackground12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="892408380132343" type="System">
+                    <param id="0" name="Variable">paralyze</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="624201594370468" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="377090333706551">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="234087998309544" type="enemy">
+                    <param id="0" name="Object">TiledBackground12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="569233129026854" type="enemy">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="356843178186002">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="892846477836984" type="enemy">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">86</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="525818919417426" type="enemy">
+                    <param id="0" name="X">5900</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="322812133865736">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="608839417095166" type="walken">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">86</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="189656005829496" type="walken">
+                    <param id="0" name="X">5900</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="820434320077988">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="449698472863849" type="walken">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">5900</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="158700041097691" type="walken">
+                    <param id="0" name="X">86</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="770382877565573">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="294191096849212" type="enemy">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">5900</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="290493206354393" type="enemy">
+                    <param id="0" name="X">86</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="296277194097568">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="513163899604724" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">enemy.Count</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="824672719392662" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="558634150161205" type="System">
+                    <param id="0" name="Layout">stage2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

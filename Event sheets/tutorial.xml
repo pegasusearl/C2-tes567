@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tutorial</name>
+    <events>
+        <include>stagemusic</include>
+        <variable constant="0" name="floora" sid="698565316434167" static="0" type="number">2486</variable>
+        <variable constant="0" name="summon" sid="355026195351816" static="0" type="number">0</variable>
+        <include>control</include>
+        <event-block sid="446276497723145">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="572327078596484" type="aktor">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">3000</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="814842507475084" type="aktor">
+                    <param id="0" name="Y">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458136077031122">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="253512057736278" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="424080285732313" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="827489691478171" type="System">
+                    <param id="0" name="Variable">summon</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="974142646167604" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="397675459311487" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;hmm tempat apa ini?&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="352519055179918" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="859845000497303" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;Gunakan panah kiri kanan untuk berjalan.&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="470421693016900" type="hint">
+                    <param id="0" name="Text">&quot;Gunakan panah kiri kanan untuk berjalan.&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="497320390112819" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="956045325150243" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="896905718599167" type="System">
+                    <param id="0" name="Variable">floora</param>
+                    <param id="1" name="Value">5000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="241536264316812">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="859645210061586" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="418251096499122" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="439069585417255" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="799131608890784" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="0" name="Set text" sid="321554644486026" type="hint">
+                    <param id="0" name="Text">&quot;Bagus!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="750282482677075" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="680379928774304" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;gampang&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="190913237275186" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="359300776248023" type="hint">
+                    <param id="0" name="Text">&quot;Gunakan SHIFT untuk seluncur&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="989138381846731" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356356627544533">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="819593900214255" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="937922810400852" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="790477267369855" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="852716980247849" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;Cihuuy!!&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="332710276300633" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="0" name="Set text" sid="207409480327224" type="hint">
+                    <param id="0" name="Text">&quot;nah begitu&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="481636657156601" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="848395618023050" type="hint">
+                    <param id="0" name="Text">&quot;Gunakan Z untuk melompat&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="592570651459604">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="458255815761455" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="261600067817164" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="893879442892607" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="786469630315567" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;gini doang?&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="277717391508891" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="0" name="Set text" sid="193854929106201" type="hint">
+                    <param id="0" name="Text">&quot;kamu hebat!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="877646897327711" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="709475359480261" type="hint">
+                    <param id="0" name="Text">&quot;Persiapkan dirimu. Untuk menahan meriam&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="572366059208466" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="985165448462641" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="739236875523733">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="307808237516652" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="618189852066424" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="526106418913793" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="0" name="Set text" sid="379809603029333" type="hint">
+                    <param id="0" name="Text">&quot;untuk menahan meriam. gunakan tombol C&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="166628430752570" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-3" name="Create object" sid="775712312601331" type="System">
+                    <param id="0" name="Object to create">rocket</param>
+                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                    <param id="2" name="X">walken.X+700</param>
+                    <param id="3" name="Y">walken.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="364884485091711" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="443779518515069" type="System">
+                    <param id="0" name="Time scale">0.1</param>
+                </action>
+                <action id="-16" name="Wait" sid="243607913680990" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="168517125931068" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="970394540960597" type="System">
+                    <param id="0" name="Object to create">rocket</param>
+                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                    <param id="2" name="X">walken.X-700</param>
+                    <param id="3" name="Y">walken.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="494251134858127" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="927423202148601" type="System">
+                    <param id="0" name="Time scale">0.1</param>
+                </action>
+                <action id="-16" name="Wait" sid="808744647343727" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="399768348816666" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130927714340565">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="309688313973137" type="Keyboard">
+                    <param id="0" name="Key">67 (C)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="553254306651647" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="459292776130353" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="-9" name="Set value" sid="966686837057591" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;terus?&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="695497645459973" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="0" name="Set text" sid="212587905885195" type="hint">
+                    <param id="0" name="Text">&quot;Energimu cepat terkuras saat menangkis. Manfaatkan sebaik mungkin.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="229878609728708" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="857848416227026" type="System">
+                    <param id="0" name="Variable">chat</param>
+                    <param id="1" name="Value">&quot;ya ya ya, udah cepetan!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="954041269454936" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Set text" sid="232004071047397" type="hint">
+                    <param id="0" name="Text">&quot;Selanjutnya tahan tombol X untuk memukul. Semakin lama ditahan, pukulannya semakin keras.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="651510297698594">
+            <conditions>
+                <condition id="3" name="On key released" sid="452763002560754" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="539787661369922" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="861072551085487">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="935482759107677" type="System">
+                            <param id="0" name="Variable">power</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="973547460504088" type="hint">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="270639983822825" type="hint">
+                            <param id="0" name="Text">&quot;Bagus! Kamu sudah tahu semua kontrol di game ini.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="435710420042091" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="157717269320151" type="hint">
+                            <param id="0" name="Text">&quot;Aku akan mensummon robot. Kalahkan dia dengan pukulanmu. Jangan lupa menangkis.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="631234075461379" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="416355867790093" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="909902888321436">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="147795654305057" type="System">
+                            <param id="0" name="Variable">power</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="800693376315724" type="hint">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="537647451650578" type="System">
+                            <param id="0" name="Variable">chat</param>
+                            <param id="1" name="Value">&quot;X nya ditahan! Terus lepas&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="572169951354867">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="839682322725211" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="981203806303076" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">enemy.Count</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="697461393290404" type="System">
+                    <param id="0" name="Variable">summon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="475137502717266" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">8</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="307595735133717" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="929130627563909" type="System">
+                    <param id="0" name="Object to create">enemy</param>
+                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                    <param id="2" name="X">walken.X</param>
+                    <param id="3" name="Y">walken.Y-100</param>
+                </action>
+                <action id="-9" name="Set value" sid="260220821536459" type="System">
+                    <param id="0" name="Variable">summon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="792463509292391" type="System">
+                    <param id="0" name="Variable">saferange</param>
+                    <param id="1" name="Value">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="230302072427261">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="841520947134973" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">enemy.Count</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="949165686467931" type="System">
+                    <param id="0" name="Variable">summon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="836400414986861" type="hint">
+                    <param id="0" name="Text">&quot;Kamu sudah pandai bermain.&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="842459342163140" type="hint">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="901618249209918" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="512255622712182" type="System">
+                    <param id="0" name="Variable">floora</param>
+                    <param id="1" name="Value">2486</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="206384959838960" type="System">
+                    <param id="0" name="Layout">stage1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="109684733822959">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="369868363001166" type="System">
+                    <param id="0" name="Variable">summon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="553481200168700" type="System">
+                    <param id="0" name="Object">enemy</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="842682235697672">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="275766770499033" type="enemy">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">900</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="468603790732721" type="System">
+                            <param id="0" name="Variable">floora</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2486</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="589265481829073" type="System">
+                            <param id="0" name="Variable">floora</param>
+                            <param id="1" name="Value">2486</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640856288324942">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="841651088678550" type="enemy">
+                            <param id="0" name="Instance variable">hp</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">900</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="982672995710893" type="System">
+                            <param id="0" name="Variable">floora</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">5000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="454331785527481" type="System">
+                            <param id="0" name="Variable">floora</param>
+                            <param id="1" name="Value">5000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="183650409483521">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="290091180530543" type="tutorialtile2">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">floora</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="758169898482325" type="tutorialtile2">
+                    <param id="0" name="Y">ceil(tutorialtile2.Y+((floora-tutorialtile2.Y)/100))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769910079785870">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="346802791820404" type="tutorialtile2">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">floora</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="846074741632067" type="tutorialtile2">
+                    <param id="0" name="Y">floor(tutorialtile2.Y-((tutorialtile2.Y-floora)/10))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

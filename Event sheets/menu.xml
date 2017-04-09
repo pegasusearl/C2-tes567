@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>menu</name>
+    <events>
+        <variable constant="0" name="selection" sid="992275370259296" static="0" type="number">0</variable>
+        <event-block sid="579623569202077">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="215278814340794" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="272874714662470" type="Audio" />
+                <action id="0" name="Play" sid="115339410082180" type="Audio">
+                    <param id="0" name="Audio file">through space</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="620145328391989" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">lastplayed</param>
+                </action>
+                <action disabled="1" id="10" name="Request fullscreen" sid="754225310662856" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action disabled="1" id="-40" name="Set fullscreen scaling" sid="555934335939362" type="System">
+                    <param id="0" name="Fullscreen scaling">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="854214780886706" title="Menu">
+            <sub-events>
+                <event-block sid="401460082154596">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="159873109681192" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="157315307067740" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;Start New&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="252680193250082">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="269102554050631" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="381434294354509" type="System">
+                                    <param id="0" name="Layout">tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="732842095993688">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="682804243037136" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="430502386552545" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;tutorial&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="595768951416421">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="780581556521497" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="345052558672263" type="System">
+                                    <param id="0" name="Layout">tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="986202949963795">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="856455524374519" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="664675524381955" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;stage1&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="993212647300760">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="634694972166413" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="763341080343589" type="System">
+                                    <param id="0" name="Layout">stage1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="256839679934291">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="411826653306142" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="619166158901461" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;stage2&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="637543581980807">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="689182433782341" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="157428489941117" type="System">
+                                    <param id="0" name="Layout">stage2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="790448734296184">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="937006390482953" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="571215104733589" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;stage3&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="986049762562397">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="436157534859751" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="259884194709505" type="System">
+                                    <param id="0" name="Layout">stage3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="564294076558462">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="149382751110184" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="701445661973514" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;stage4&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="436610789596516">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="785730904326238" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="275512130228408" type="System">
+                                    <param id="0" name="Layout">stage4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="667377151296057">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="692390639923989" type="System">
+                            <param id="0" name="Variable">selection</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="725834734434509" type="START">
+                            <param id="0" name="Instance variable">shown</param>
+                            <param id="1" name="Value">&quot;EXIT&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="865967532109413">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="804978416460300" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Close" sid="334610189399181" type="Browser" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="665617875857215">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="894605397329378" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="972242380374283" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="374130574557626">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="838700755178655" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="639692107061127" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="298071691923575">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="127739887363164" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="220337641702661" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602370389551594">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="153905651854462" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="394608284558971" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="359737724816434">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="554939986124808" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="545591585119723" type="START">
+                    <param id="0" name="Text">START.shown</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557660692008086">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="187568411972447" type="System">
+                    <param id="0" name="Variable">gameover</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="264701759391791" type="hint">
+                    <param id="0" name="Text">&quot;GAME OVER&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="588939555615452">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="789486393934439" type="System">
+                    <param id="0" name="Variable">gameover</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="538963203704524" type="hint">
+                    <param id="0" name="Text">&quot;BERHASIL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 4</name>
+    <events>
+        <include>control</include>
+        <event-block sid="212197097717281">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="624448968598254" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set layout angle" sid="837845183333886" type="System">
+                    <param id="0" name="Angle">LayoutAngle+1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

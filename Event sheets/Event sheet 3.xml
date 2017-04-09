@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <include>stagemusic</include>
+        <include>control</include>
+        <event-block sid="604399662005938">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="546930480401603" type="walken">
+                    <param id="0" name="Object">Sprite20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="364302803088860" type="Sprite20">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="488956260972385">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="775588906446750" type="aktor">
+                    <param id="0" name="Object">a</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="995445659581380" type="aktor">
+                    <param id="0" name="Y">-200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="916659603326655">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="468578474687282" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">enemy.Count</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="596388910111879" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="383849223455572" type="System">
+                    <param id="0" name="Variable">gameover</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="266789125843232" type="System">
+                    <param id="0" name="Variable">lastplayed</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="-9" name="Set value" sid="909609555877464" type="System">
+                    <param id="0" name="Variable">gameover</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="740066770560453" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753105771341828">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="881577288793299" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="737126307575337" type="System">
+                    <param id="0" name="Variable">selection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350252487321131">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="652314183463133" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="366872620386292" type="System">
+                    <param id="0" name="Variable">lastplayed</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

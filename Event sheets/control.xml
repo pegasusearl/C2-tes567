@@ -1,0 +1,1720 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>control</name>
+    <events>
+        <variable constant="0" name="saferange" sid="366878382360558" static="0" type="number">700</variable>
+        <variable constant="0" name="lastplayed" sid="395486932382287" static="0" type="number">0</variable>
+        <variable constant="0" name="gameover" sid="272958372170777" static="0" type="number">0</variable>
+        <variable constant="1" name="satu" sid="663441060041630" static="0" type="number">1</variable>
+        <variable constant="0" name="health" sid="824792190185432" static="0" type="number">1000</variable>
+        <variable constant="0" name="chat" sid="421428125456821" static="0" type="text"></variable>
+        <variable constant="0" name="scale" sid="156150919939728" static="0" type="number">1</variable>
+        <variable constant="0" name="power" sid="278792846923066" static="0" type="number">0</variable>
+        <variable constant="0" name="impactface" sid="640224016023735" static="0" type="number">0</variable>
+        <variable constant="0" name="rest" sid="618017378795878" static="0" type="number">0</variable>
+        <variable constant="0" name="energy" sid="853204429508970" static="0" type="number">1000</variable>
+        <variable constant="0" name="paralyze" sid="294177389408526" static="0" type="number">0</variable>
+        <variable constant="0" name="2jump" sid="236113577218027" static="0" type="number">0</variable>
+        <event-block sid="926670690316272">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="795487359756557" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="482158104703537" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-9" name="Set value" sid="832010739127835" type="System">
+                    <param id="0" name="Variable">energy</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="476585789447673" type="compass">
+                    <param id="0" name="Layer">&quot;HUD&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="496130333370519" type="compass">
+                    <param id="0" name="X">timedata.X</param>
+                    <param id="1" name="Y">timedata.Y</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="545855620771049" type="supcompas">
+                    <param id="0" name="Layer">&quot;Karakter&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="378412788338339" type="blood">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="241109207081406" type="System">
+                    <param id="0" name="Variable">saferange</param>
+                    <param id="1" name="Value">700</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="576702296027441" title="Animation">
+            <sub-events>
+                <comment>ANTI ROCKET</comment>
+                <event-block sid="567499137240834">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="278687202045118" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="219031609310588">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="911787379161581" type="walken" />
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="260820765804790" type="walken" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="175827230146221" type="walken">
+                                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="777140286103027">
+                            <conditions>
+                                <condition behavior="Platform" disabled="1" id="7" name="On stopped" sid="184059437087530" type="walken" />
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="297298895247125" type="walken" />
+                                <condition behavior="Platform" disabled="1" id="0" inverted="1" name="Is moving" sid="908007833194113" type="walken" />
+                                <condition id="2" inverted="1" name="Is playing" sid="240883063354686" type="walken">
+                                    <param id="0" name="Animation">&quot;charge&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="379544929901496" type="walken">
+                                    <param id="0" name="Animation">&quot;unleash&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="932431360574294" type="walken">
+                                    <param id="0" name="Animation">&quot;paralyzed&quot;</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="807052627972012" type="shield" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="289883277464238">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Key is down" sid="346448032313867" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="611923512311332" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="446738997212777" type="walken">
+                                            <param id="0" name="Animation">&quot;stand&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>DOUBLE JUMP ROLL</comment>
+                <event-block sid="581101741872248">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="864084278811934" type="walken" />
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="300371579433391" type="walken" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="887903446390378">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="875000599189453" type="System">
+                                    <param id="0" name="Variable">2jump</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="277934786453385" type="walken">
+                                    <param id="0" name="Animation">&quot;jump2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="108315116224045">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="607573279783946" type="System">
+                                    <param id="0" name="Variable">2jump</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="434763221892174" type="walken">
+                                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="468547747558014" type="System">
+                                    <param id="0" name="Variable">2jump</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="198509304085296">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="274046678039512" type="walken" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="926415439261163" type="System">
+                            <param id="0" name="Variable">2jump</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="769242427151396" title="Control">
+            <sub-events>
+                <event-block sid="717787024160719">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="280163386977453" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="981105523528214" type="walken">
+                            <param id="0" name="Max Speed">260</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="749554508405871" type="Particles4">
+                            <param id="0" name="Rate">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="320952385431203">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="426347312185648">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="359797806797369" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="628034115685463" type="System">
+                            <param id="0" name="Variable">rest</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="973642108430290" type="walken">
+                            <param id="0" name="Animation">&quot;charge&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="358685614750970" type="walken">
+                            <param id="0" name="Animation">&quot;unleash&quot;</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="182011722230046" type="shield" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="868702801337720">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="231298248483063" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="957554686115583" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="100786953116213" type="walken">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="664952097370716" type="walken">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="845069926669078">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="717928446566376" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="475952341619039" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="608844659831693" type="walken">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="222672080701359" type="walken">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="236898665777353">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="515211619012501" type="Keyboard">
+                                    <param id="0" name="Key">90 (Z)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="967962193935730" type="walken">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>ROCKET ANIMARION</comment>
+                        <event-block sid="829811575675232">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="923694822844553" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="925461779230081" type="walken">
+                                    <param id="0" name="Animation">&quot;roketground&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="1" name="Set rate" sid="952747745180198" type="Particles4">
+                                    <param id="0" name="Rate">40</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="575815052539423" type="Particles4">
+                                    <param id="0" name="X">walken.X</param>
+                                    <param id="1" name="Y">walken.Y+190</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="129101730540074" type="System">
+                                    <param id="0" name="Variable">scale</param>
+                                    <param id="1" name="Value">0.7</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="317840061831961">
+                                    <conditions>
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="912753596247330" type="walken">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="Speed">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="599537849406433" type="walken">
+                                            <param id="0" name="Animation">&quot;exhausted&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="393262955646230">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="240619403625559" type="System">
+                                            <param id="0" name="Variable">energy</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="781542519593001">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Is playing" sid="948225219370097" type="walken">
+                                                    <param id="0" name="Animation">&quot;roketground&quot;</param>
+                                                </condition>
+                                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="890688790671570" type="walken" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="862125886333381" type="walken">
+                                                    <param id="0" name="Animation">&quot;roketground&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="962377879175771">
+                                            <conditions>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="411296767242297" type="walken" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="124385708739314" type="walken">
+                                                    <param id="0" name="Vector X">800</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="384419185661284" type="walken">
+                                                    <param id="0" name="Max Speed">800</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="682737962901990">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="720885879012374" type="walken" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="799419683402732" type="walken">
+                                                    <param id="0" name="Vector X">-800</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="867514252181330" type="walken">
+                                                    <param id="0" name="Max Speed">800</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="233011558886272">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="422863378350434" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Subtract from" sid="657688641806225" type="System">
+                                                    <param id="0" name="Variable">energy</param>
+                                                    <param id="1" name="Value">10</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="130656122165245" title="Mechanic">
+            <sub-events>
+                <comment>PARALYZE</comment>
+                <event-block sid="659858650037779">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="975339157465557" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="627489403597768" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="910998222820409" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130715572638551">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="423276772166197" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="947828150160462">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is playing" sid="996899094787893" type="walken">
+                                    <param id="0" name="Animation">&quot;paralyzed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="965919892717098" type="walken">
+                                    <param id="0" name="Animation">&quot;paralyzed&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="540527489407140">
+                            <conditions>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="549438218838271" type="walken" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="766435301471212" type="walken">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">0.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="576578277483085">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="113305481803102" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="669392711329040" type="walken">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.05</param>
+                            <param id="2" name="Duration">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="157800781749292" type="walken">
+                            <param id="0" name="Animation">&quot;stand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ENERGY</comment>
+                <event-block sid="256732216159680">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="874375315218383" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="427184124357978" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1000</param>
+                        </condition>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="320164325148229" type="walken">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Speed">700</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="621264384255469" type="walken">
+                            <param id="0" name="Animation">&quot;charge&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="860063457150639" type="walken">
+                            <param id="0" name="Animation">&quot;unleash&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="878299983588214" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="372047995144995" type="System">
+                            <param id="0" name="Variable">scale</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>RESTING. salah satu event di paralyze</comment>
+                <event-block sid="558847053623078">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="934998438056715" type="System">
+                            <param id="0" name="Variable">rest</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="542040167314676" type="System">
+                            <param id="0" name="Variable">rest</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="431911767133465">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="226864961601523" type="System">
+                                    <param id="0" name="Variable">paralyze</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="311491746527968" type="walken">
+                                    <param id="0" name="Animation">&quot;exhausted&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="594826709844806">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="191822691091368" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="792596065537258" type="System">
+                            <param id="0" name="Variable">rest</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="132050804120896" type="Particles4">
+                            <param id="0" name="Rate">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="886446696241259" type="System">
+                            <param id="0" name="Variable">scale</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="296334761640041" type="shield">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Smooth layout scaling</comment>
+                        <event-block sid="670837107841608">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="552792340496523" type="System">
+                                    <param id="0" name="First value">chatt.Count</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="799355106222561" type="System">
+                                    <param id="0" name="Variable">chat</param>
+                                    <param id="1" name="Value">&quot;aduh capek&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="703462440831351">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="916780114891245" type="System">
+                            <param id="0" name="Variable">scale</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">LayoutScale</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="369041360139775" type="System">
+                            <param id="0" name="Scale">LayoutScale+((scale-LayoutScale)/10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426133370176459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="519814963251377" type="System">
+                            <param id="0" name="Variable">scale</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">LayoutScale</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="513765589703671" type="System">
+                            <param id="0" name="Scale">LayoutScale-((LayoutScale-scale)/10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="936729126320822">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="267075236987035" type="System">
+                            <param id="0" name="Variable">chat</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot; &quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="180803046431452" type="System">
+                            <param id="0" name="Variable">SATU</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">chatt.Count</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="717825915672886" type="System">
+                            <param id="0" name="Object to create">chatt</param>
+                            <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                            <param id="2" name="X">walken.X</param>
+                            <param id="3" name="Y">walken.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="948370319455374" type="chatt">
+                            <param id="0" name="Instance variable">msg</param>
+                            <param id="1" name="Value">chat</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="929765894507654" type="System">
+                            <param id="0" name="Variable">chat</param>
+                            <param id="1" name="Value">&quot; &quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="132069752329203" title="HUD">
+            <sub-events>
+                <event-block sid="518900146481976">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="441159363360994" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="873075489366085" type="mpbar">
+                            <param id="0" name="Width">energy/1000*136</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="811784267739591" type="hpbar">
+                            <param id="0" name="Width">health/1000*136</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="318785286855101" title="hammer shield">
+            <sub-events>
+                <event-block sid="258240746967447">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="994249010025252" type="System">
+                            <param id="0" name="Variable">paralyze</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="148468152469217" type="System">
+                            <param id="0" name="Variable">rest</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="563346210567381">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="294561371958527" type="Keyboard">
+                                    <param id="0" name="Key">88 (X)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="680903065580604">
+                                    <conditions>
+                                        <condition behavior="Platform" id="2" name="Is on floor" sid="541562212535027" type="walken" />
+                                        <condition id="2" inverted="1" name="Is playing" sid="154526315381796" type="walken">
+                                            <param id="0" name="Animation">&quot;unleash&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="596029353140152" type="walken">
+                                            <param id="0" name="Animation">&quot;charge&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="686684767624019" type="walken">
+                                            <param id="0" name="Max Speed">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="979637126619021" type="System">
+                                            <param id="0" name="Variable">scale</param>
+                                            <param id="1" name="Value">1.5</param>
+                                        </action>
+                                        <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="569551818196694" type="walken">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action disabled="1" id="-7" name="Scroll to position" sid="296736593116003" type="System">
+                                            <param id="0" name="X">walken.X</param>
+                                            <param id="1" name="Y">walken.Y+100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="123121980059222">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="187626987372411" type="walken" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="944088817130811" type="System">
+                                            <param id="0" name="Variable">impactface</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="652980432706748">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="106953445860292" type="walken" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="503184570174714" type="System">
+                                            <param id="0" name="Variable">impactface</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="349550031581583">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="869461739496939" type="System">
+                                            <param id="0" name="Variable">power</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1000</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="534314500324278" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="383023157725726" type="System">
+                                            <param id="0" name="Variable">power</param>
+                                            <param id="1" name="Value">20</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="850566873655057" type="walken">
+                                            <param id="0" name="Magnitude">power/1000*30</param>
+                                            <param id="1" name="Duration">0.1</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="718552582121385">
+                                    <conditions>
+                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="282408243382532" type="walken" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="644058511867681" type="walken">
+                                            <param id="0" name="Vector Y">1000</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="352430821651892">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="911748579086508" type="Keyboard">
+                                    <param id="0" name="Key">88 (X)</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="391414393729450" type="walken">
+                                    <param id="0" name="Animation">&quot;charge&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="748294935024721" type="walken">
+                                    <param id="0" name="Animation">&quot;unleash&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="560875719897818" type="System">
+                                    <param id="0" name="Object to create">playerhit</param>
+                                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                                    <param id="2" name="X">walken.X+(impactface*100)</param>
+                                    <param id="3" name="Y">walken.Y+150</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="420936221476392" type="System">
+                                    <param id="0" name="Time scale">0.1</param>
+                                </action>
+                                <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="464868342793090" type="walken">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="906418031763551">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="290503694807045" type="playerhit">
+                                            <param id="0" name="Object">enemy</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="799296589730563">
+                                            <conditions>
+                                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="249306872329447" type="enemy" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="ScrollTo" id="0" name="Shake" sid="446625568403101" type="walken">
+                                                    <param id="0" name="Magnitude">power/1000*30</param>
+                                                    <param id="1" name="Duration">1</param>
+                                                    <param id="2" name="Mode">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="1" name="Set max speed" sid="833623067079296" type="enemy">
+                                                    <param id="0" name="Max Speed">2000</param>
+                                                </action>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="532622190196558" type="enemy">
+                                                    <param id="0" name="Vector X">(power*(impactface/200))+(300*(impactface/200))</param>
+                                                </action>
+                                                <action behavior="Platform" id="9" name="Set vector Y" sid="879329072139102" type="enemy">
+                                                    <param id="0" name="Vector Y">(-1*power)-300</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="506134798221545" type="System">
+                                                    <param id="0" name="Variable">scale</param>
+                                                    <param id="1" name="Value">0.7</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="679529439470455" type="enemy">
+                                                    <param id="0" name="Instance variable">hp</param>
+                                                    <param id="1" name="Value">power</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="292664476930073" type="System">
+                                                    <param id="0" name="Object to create">chatt</param>
+                                                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                                                    <param id="2" name="X">enemy.X</param>
+                                                    <param id="3" name="Y">enemy.Y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="523048832667200" type="chatt">
+                                                    <param id="0" name="Instance variable">msg</param>
+                                                    <param id="1" name="Value">power</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="852759852168320" type="chatt">
+                                                    <param id="0" name="Text">power</param>
+                                                </action>
+                                                <action behavior="Fade" id="4" name="Set fade-out time" sid="324383433252049" type="chatt">
+                                                    <param id="0" name="Fade-out time">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="0" name="Set speed" sid="751360731312893" type="chatt">
+                                                    <param id="0" name="Speed">200</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="739986351516973" type="System">
+                                                    <param id="0" name="Seconds">(power/1000*0.07)+0.03</param>
+                                                </action>
+                                                <action id="-13" name="Set time scale" sid="642158564332643" type="System">
+                                                    <param id="0" name="Time scale">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="267472116139346" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="416962233963768" type="System">
+                                                    <param id="0" name="Variable">power</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="294298451379160" type="playerhit" />
+                                                <action id="4" name="Set animation" sid="682513170199156" type="walken">
+                                                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Flash" id="0" name="Flash" sid="501437749116453" type="enemy">
+                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                    <param id="2" name="Duration">2</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="337636920111085" type="System">
+                                                    <param id="0" name="Variable">scale</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="439071850820627">
+                                            <conditions>
+                                                <condition behavior="Flash" id="0" name="Is flashing" sid="656880853230947" type="enemy" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="ScrollTo" id="0" name="Shake" sid="298652693968166" type="walken">
+                                                    <param id="0" name="Magnitude">power/1000*30</param>
+                                                    <param id="1" name="Duration">1</param>
+                                                    <param id="2" name="Mode">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="941981602147954" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="776122844889039" type="System">
+                                                    <param id="0" name="Variable">power</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="715879068837527" type="playerhit" />
+                                                <action id="4" name="Set animation" sid="400639755902221" type="walken">
+                                                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-13" name="Set time scale" sid="762787928066222" type="System">
+                                                    <param id="0" name="Time scale">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="860981112569627" type="System">
+                                                    <param id="0" name="Variable">scale</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="444610032111383">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="909299377085884" type="playerhit">
+                                            <param id="0" name="Object">enemy</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="759705184935007" type="walken">
+                                            <param id="0" name="Magnitude">power/1000*30</param>
+                                            <param id="1" name="Duration">1</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="634979916787476" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="688089973019656" type="System">
+                                            <param id="0" name="Variable">power</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="536608146003579" type="playerhit" />
+                                        <action id="4" name="Set animation" sid="554082970731055" type="walken">
+                                            <param id="0" name="Animation">&quot;stand&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set time scale" sid="429707383402277" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="358811364987302" type="System">
+                                            <param id="0" name="Variable">scale</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="655108042945541">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="921131958121464" type="Keyboard">
+                                    <param id="0" name="Key">67 (C)</param>
+                                </condition>
+                                <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="958622447349416" type="walken" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930008874784355">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="878871263899039" type="walken" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="698852575488573" type="shield">
+                                            <param id="0" name="X">walken.X-70</param>
+                                            <param id="1" name="Y">walken.Y</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="406549931681025" type="shield">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="260902216682843" type="shield">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="492460953457340">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="898229435032631" type="walken" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="350948590149272" type="shield">
+                                            <param id="0" name="X">walken.X+70</param>
+                                            <param id="1" name="Y">walken.Y</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="559664766688602" type="shield">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="685358522631741" type="shield">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="971919050557935">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is playing" sid="449006273771837" type="walken">
+                                            <param id="0" name="Animation">&quot;block&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="922922013767514" type="walken">
+                                            <param id="0" name="Animation">&quot;block&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="300100306847162">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="544627771750367" type="Keyboard">
+                                    <param id="0" name="Key">67 (C)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="252200895349358" type="shield">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318965889196828">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="579053615632830" type="shield" />
+                                <condition id="-6" name="Every X seconds" sid="548003639190099" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="325345582813722" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="813437019006359" title="FOE BEHAVIOUR">
+            <sub-events>
+                <event-group description="" sid="409893048905471" title="runaway">
+                    <sub-events>
+                        <event-block sid="881662208571710">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="794797922164391" type="enemy" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="650090429701868">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="840372378361201" type="enemy">
+                                            <param id="0" name="Side">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="166636790591571" type="enemy">
+                                            <param id="0" name="Instance variable">overheat</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="600909126511366" type="enemy">
+                                            <param id="0" name="Max Speed">800</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="217084773903374" type="enemy">
+                                            <param id="0" name="Vector X">600</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="258195584178398">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="865535406708074" type="enemy">
+                                            <param id="0" name="Side">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="322990281285194" type="enemy">
+                                            <param id="0" name="Instance variable">overheat</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="724461950103637" type="enemy">
+                                            <param id="0" name="Max Speed">800</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="862967395653139" type="enemy">
+                                            <param id="0" name="Vector X">-600</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="594935961443186">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="273169009805897" type="enemy">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">walken.X-saferange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="773387089462168" type="enemy">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="468319815949554">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="423961767186330" type="enemy">
+                                            <param id="0" name="Side">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="665487523851150" type="enemy">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="252976537044020">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="482514920444534" type="enemy">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">walken.X+saferange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="752847770679317" type="enemy">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="821928730368253">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="245378580523752" type="enemy">
+                                            <param id="0" name="Side">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="975044872238742" type="enemy">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="396309000063114">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="170098125631051" type="enemy">
+                                    <param id="0" name="Instance variable">overheat</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="723501716770145">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="876595902318565" type="enemy">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">walken.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="663462636725086" type="enemy">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">walken.X-400</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="424518873163475" type="enemy">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="526713430323750">
+                                            <conditions>
+                                                <condition behavior="Platform" id="10" name="Is by wall" sid="238192303684932" type="enemy">
+                                                    <param id="0" name="Side">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="742758602491995" type="enemy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block disabled="1" sid="758250844210803">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="653741693754720" type="enemy">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">walken.X-400</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="956642278741600" type="enemy">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block disabled="1" sid="466069468941848">
+                                            <conditions>
+                                                <condition behavior="Platform" id="10" name="Is by wall" sid="621637498396337" type="enemy">
+                                                    <param id="0" name="Side">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="120192115251409" type="enemy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="285883299742769">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="150471083051772" type="enemy">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">walken.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="340895197708177" type="enemy">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">walken.X+400</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="190506630839118" type="enemy">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="867595682665182">
+                                            <conditions>
+                                                <condition behavior="Platform" id="10" name="Is by wall" sid="211743105728101" type="enemy">
+                                                    <param id="0" name="Side">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="539559018570986" type="enemy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="508008196913768">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="669200484560311" type="enemy" />
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="703106823755798" type="enemy" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="618968606762588" type="enemy">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="153762527436066">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="600056464825455" type="enemy">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">walken.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="390163015424598" type="enemy">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="847810764282594">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="379089038257095" type="enemy">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">walken.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="982351174115525" type="enemy">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="424221019825588">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="998899263584161" type="enemy" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="1" name="Set max speed" sid="606119871012763" type="enemy">
+                    <param id="0" name="Max Speed">330</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="457221082402204">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="463197851633837" type="enemy">
+                    <param id="0" name="Instance variable">overheat</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="934228734117801" type="enemy">
+                    <param id="0" name="Animation">&quot;stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="175396920255744">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="478079915178660" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="262359057705650" type="enemy">
+                    <param id="0" name="Instance variable">overheat</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="688798369172298" type="enemy">
+                    <param id="0" name="Instance variable">overheat</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="512800985508676" type="enemy">
+                    <param id="0" name="Animation">&quot;overheat&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="694602790891278">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="409638834629949" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="527664074007027" type="enemy">
+                    <param id="0" name="Instance variable">canon</param>
+                    <param id="1" name="Value">round(random(1,3))</param>
+                </action>
+                <action id="-10" name="Set value" sid="407565014614660" type="enemy">
+                    <param id="0" name="Instance variable">overheat</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="816320787965762">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="310111784964741" type="enemy">
+                            <param id="0" name="Instance variable">canon</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="614912366356354" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="387551163102603" type="System">
+                            <param id="0" name="Object to create">rocket</param>
+                            <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                            <param id="2" name="X">enemy.X</param>
+                            <param id="3" name="Y">enemy.Y</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="102303667334606" type="enemy">
+                            <param id="0" name="Instance variable">canon</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="807520986012165">
+            <conditions>
+                <condition behavior="Fade" id="2" name="On wait finished" sid="556573054876391" type="chatt" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="100609097438603" type="chatt">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="0" name="Set text" sid="348720497427923" type="chatt">
+                    <param id="0" name="Text">chatt.msg</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260740678352409">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="196168030500875" type="enemy" />
+                <condition id="-7" name="Compare instance variable" sid="853665695030542" type="enemy">
+                    <param id="0" name="Instance variable">hp</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="930522358931863" type="enemy" />
+            </actions>
+        </event-block>
+        <event-block sid="602426484213926">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="656009339836583" type="System">
+                    <param id="0" name="Interval (seconds)">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Rotate toward position" sid="450673581010081" type="rocket">
+                    <param id="0" name="Degrees">2</param>
+                    <param id="1" name="X">walken.X</param>
+                    <param id="2" name="Y">walken.Y+100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="104770165851605">
+            <conditions>
+                <condition id="-18" name="On created" sid="139454589836769" type="rocket" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="248589856469101" type="rocket">
+                    <param id="0" name="X">walken.X</param>
+                    <param id="1" name="Y">walken.Y+100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="993603139306177">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="446575776085846" type="System">
+                    <param id="0" name="Interval (seconds)">0.01</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="798803636910472">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="524664453882286" type="rocket">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">rocket.lastx</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="659411285905458" type="rocket">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="263675077441999" type="rocket">
+                            <param id="0" name="Instance variable">lastx</param>
+                            <param id="1" name="Value">rocket.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815226366552605">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="310610134404652" type="rocket">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">rocket.lastx</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="538535306729613" type="rocket">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="513145193589337" type="rocket">
+                            <param id="0" name="Instance variable">lastx</param>
+                            <param id="1" name="Value">rocket.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="410154957256340">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="183097703973830" type="rocket" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="242477415559511" type="rocket" />
+            </actions>
+            <sub-events>
+                <event-block sid="788485477102037">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="346206464097671" type="enemy" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="230412047651957" type="System">
+                            <param id="0" name="Object to create">chatt</param>
+                            <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                            <param id="2" name="X">enemy.X</param>
+                            <param id="3" name="Y">enemy.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="533599075467254" type="chatt">
+                            <param id="0" name="Instance variable">msg</param>
+                            <param id="1" name="Value">&quot;duh mleset&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="284223753312313">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="702881027208995" type="rocket">
+                    <param id="0" name="Object">walken</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="470986767529095" type="rocket" />
+                <action id="-10" name="Add to" sid="974024327972507" type="System">
+                    <param id="0" name="Variable">paralyze</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="621166276949501" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-3" name="Create object" sid="926201777396602" type="System">
+                    <param id="0" name="Object to create">chatt</param>
+                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                    <param id="2" name="X">enemy.X</param>
+                    <param id="3" name="Y">enemy.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="427399259883517" type="chatt">
+                    <param id="0" name="Instance variable">msg</param>
+                    <param id="1" name="Value">&quot;wkwkwk&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="467847837952186">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="929718949366693" type="walken" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="571475847505532" type="walken">
+                            <param id="0" name="Vector X">-500</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="742406776492373" type="walken">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="324736120627402">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="768055344686291" type="walken" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="222143963989837" type="walken">
+                            <param id="0" name="Vector X">500</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="661805648149419" type="walken">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="830875323898112">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="972961742944156" type="rocket">
+                    <param id="0" name="Object">shield</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="850020939819840" type="shield" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="495384025725798" type="rocket" />
+                <action id="-3" name="Create object" sid="335245604496878" type="System">
+                    <param id="0" name="Object to create">chatt</param>
+                    <param id="1" name="Layer">&quot;Karakter&quot;</param>
+                    <param id="2" name="X">enemy.X</param>
+                    <param id="3" name="Y">enemy.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="847202903375017" type="chatt">
+                    <param id="0" name="Instance variable">msg</param>
+                    <param id="1" name="Value">&quot;curang!!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="862499141951966">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="977942011651289" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="504845428242269" type="System">
+                    <param id="0" name="Object">enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="346149489480877" type="supcompas">
+                    <param id="0" name="X">walken.X</param>
+                    <param id="1" name="Y">walken.Y</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="340105375404484" type="supcompas">
+                    <param id="0" name="X">enemy.X</param>
+                    <param id="1" name="Y">enemy.Y</param>
+                </action>
+                <action id="-8" name="Set angle" sid="143354175274178" type="compass">
+                    <param id="0" name="Angle">supcompas.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="803756114406326">
+            <conditions>
+                <condition id="2" name="Key is down" sid="314096279797757" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="362345144240887" type="Keyboard">
+                    <param id="0" name="Key">76 (L)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="457394191208583" type="System">
+                    <param id="0" name="Object">enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="114408709640267" type="enemy">
+                    <param id="0" name="Instance variable">hp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="532685184520994">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="175301723046281" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">walken.Count</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="599458888284974" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+                <action id="-9" name="Set value" sid="742581727000794" type="System">
+                    <param id="0" name="Variable">gameover</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704037344033875">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="363326158710548" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="743598986959717" type="walken" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="452884942870696" type="walken" />
+            </actions>
+        </event-block>
+        <event-block sid="104793037660886">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="776426685015368" type="System">
+                    <param id="0" name="Variable">rest</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="753497528203058" type="walken" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="791492159371030" type="walken">
+                    <param id="0" name="&apos;On&apos; time">0.4</param>
+                    <param id="1" name="&apos;Off&apos; time">0.4</param>
+                    <param id="2" name="Duration">0.8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="900738480047026">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="529979738249909" type="System">
+                    <param id="0" name="Variable">rest</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="350882603736422" type="mpbar" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="173833240944985" type="mpbar">
+                    <param id="0" name="&apos;On&apos; time">0.4</param>
+                    <param id="1" name="&apos;Off&apos; time">0.4</param>
+                    <param id="2" name="Duration">0.8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821764066419590">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="908144621944580" type="System">
+                    <param id="0" name="Variable">energy</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">300</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="962547906806622" type="mpbar" />
+                <condition id="-14" name="Compare variable" sid="849123103139060" type="System">
+                    <param id="0" name="Variable">rest</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="430734262233061" type="mpbar">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975030978108013">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="118458335550339" type="System">
+                    <param id="0" name="Variable">energy</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">460</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="828931944387439" type="System">
+                    <param id="0" name="Variable">rest</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="313968187800737" type="System">
+                    <param id="0" name="Variable">rest</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="924162568111837">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="344732248360582" type="System">
+                    <param id="0" name="Variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">300</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="156110737563245" type="blood">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <include>stagemusic</include>
+        <include>control</include>
+        <event-block sid="482463304061004">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="278568971160995" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="218399929677992">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="730161841800399" type="aktor">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">3977</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="775643287587715" type="aktor">
+                    <param id="0" name="Y">-200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="663369548102649">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="334335143978124" type="System">
+                    <param id="0" name="Variable">SATU</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">enemy.Count</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="682982701692738" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="825681076258774" type="System">
+                    <param id="0" name="Layout">stage4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794178679479614">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="310996046085316" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="163930237327133" type="System">
+                    <param id="0" name="Variable">lastplayed</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
